@@ -13,15 +13,21 @@ expand = (text)->
     .replace /\*(.+?)\*/g, '<i>$1</i>'
 
 parse = (text) ->
-  schedule = []
-  y = 20
-  for city in ['Portland','Denver','London']
-    y += 45
-    schedule.push {city, y, zone: zones[city]}
+  schedule = {zones:[]}
+  zones = ['America/Los_Angeles','America/Denver','Europe/London','Europe/Paris','Asia/Tokyo']
+  for zone in zones
+    city = zone.split('/').reverse()[0]
+    schedule.zones.push {city, zone}
+  schedule.anchor = zones[0]
   schedule
 
 render = (schedule) ->
-  height = 200
+  dx = 60
+  dy = 45
+  hy = 20
+  width = 420
+  height = hy + dy*(schedule.zones.length + 1)
+  event = moment.tz("3/14/2018 10:00 am", "MM-DD-YYYY h:mm A", schedule.anchor)
 
   markup = []
 
@@ -53,23 +59,34 @@ render = (schedule) ->
   attr = (params) ->
     ("#{k}=\"#{v}\"" for k, v of params).join " "
 
-  event = moment.tz("3/14/2018 10:00 am", "MM-DD-YYYY h:mm A", zones['Portland'])
-  svg {'viewBox':"0 0 420 #{height}"}, ->
-    rect {x: 0, y:0, width:420, height, fill:'#eee'}, ->
-    rect {x: 3*60-5, y:0, width:60+5, height, fill:'#ccc'}, ->
-    text {x: 420/2, y:30}, "Wiki Hangout"
-    for {y,city,zone} in schedule
+  marker = (title) ->
+    rect {x: 3*dx-5, y:0, width:dx+5, height, fill:'#ccc'}, ->
+    text {x: width/2, y:30}, title
+
+  color = (now) ->
+    if now.hour() >= 6 and now.hour() < 18
+      '#ffd'
+    else
+      '#ddf'
+
+  scales = (zones) ->
+    y = hy
+    for {city,zone} in zones
+      y += dy
       now = moment(event).add(-3, 'hours').tz(zone)
       for h in [-3..5]
-        x = (h+3)*60
-        color = if now.hour() >= 6 and now.hour() < 18 then '#ffd' else '#ddf'
-        rect {x,y,width:55,height:20,fill:color}, ->
+        x = (h+3)*dx
+        rect {x,y,width:dx-5,height:20,fill:color(now)}, ->
         text {x:x+20,y:y+10}, now.hours()+':00'
         now.add(1, 'hour')
       text {x:60,y:y-10}, city
 
-  markup.join "\n"
+  svg {'viewBox':"0 0 #{width}, #{height}"}, ->
+    rect {x: 0, y:0, width, height, fill:'#eee'}, ->
+    marker "Wiki Hangout"
+    scales schedule.zones
 
+  markup.join "\n"
 
 emit = ($item, item) ->
   $item.append render parse item.text
