@@ -1,0 +1,173 @@
+{
+  "title": "About Zones Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3f5ca9eb8adf5f8e",
+      "text": "Zones is a slide rule useful for scheduling and awaiting events where offsets that change with seasons and prefered times of participants are taken into account."
+    },
+    {
+      "type": "zones",
+      "id": "1fb52e4cb9be1d52",
+      "text": "Wiki Weekly Hangout\nDATE 3/14/2018\nTIME 10:15 am\nFOR 60 minutes\nALSO Pacific/Honolulu\nIN US/Pacific\nALSO America/Denver\nALSO Europe/London\nALSO Europe/Paris\nALSO Asia/Tokyo"
+    },
+    {
+      "type": "paragraph",
+      "id": "6fff045b90c3208a",
+      "text": "Say TIME and DATE to create an event."
+    },
+    {
+      "type": "paragraph",
+      "id": "0a66e6e1b57746c9",
+      "text": "Say FOR 60 minutes to set the duration."
+    },
+    {
+      "type": "paragraph",
+      "id": "f9aa74d06a0b9f37",
+      "text": "Say IN America/Chicago to use that timezone."
+    },
+    {
+      "type": "paragraph",
+      "id": "0eb81eba7d1e6100",
+      "text": "Say ALSO Europe/Berlin to show times there."
+    },
+    {
+      "type": "paragraph",
+      "id": "b1805e1b3236a4e5",
+      "text": "Say ZONES to show a list of recognized time zones."
+    },
+    {
+      "type": "paragraph",
+      "id": "88b517513cb41de9",
+      "text": "See [[More About Zones]] for time zone names."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Zones Plugin",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "3f5ca9eb8adf5f8e",
+            "text": "Here we describe the purpose of the plugin and include a sample."
+          },
+          {
+            "type": "zones",
+            "id": "1fb52e4cb9be1d52",
+            "text": "This is text in the new plugin. You can *double-click* to edit it too."
+          }
+        ]
+      },
+      "date": 1520708103000,
+      "certificate": "from mkplugin.sh"
+    },
+    {
+      "type": "edit",
+      "id": "3f5ca9eb8adf5f8e",
+      "item": {
+        "type": "paragraph",
+        "id": "3f5ca9eb8adf5f8e",
+        "text": "Zones is a slide rule useful for scheduling and awaiting events where offsets that change with seasons and prefered times of participants are taken into account."
+      },
+      "date": 1520736503948
+    },
+    {
+      "type": "edit",
+      "id": "1fb52e4cb9be1d52",
+      "item": {
+        "type": "zones",
+        "id": "1fb52e4cb9be1d52",
+        "text": "Wiki User/Developer Video Chat\n[[Google Hangout]]\nDATE Wednesdays\nTIME 10 am\nFOR 60 minutes\nIN Portland\nALSO Denver\nALSO London"
+      },
+      "date": 1520736533395
+    },
+    {
+      "type": "edit",
+      "id": "1fb52e4cb9be1d52",
+      "item": {
+        "type": "zones",
+        "id": "1fb52e4cb9be1d52",
+        "text": "Wiki Weekly Hangout\nDATE 3/14/2018\nTIME 10:15 am\nFOR 60 minutes\nALSO Pacific/Honolulu\nIN US/Pacific\nALSO America/Denver\nALSO Europe/London\nALSO Europe/Paris\nALSO Asia/Tokyo"
+      },
+      "date": 1520810164826
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "6fff045b90c3208a",
+        "text": "Say TIME and DATE to create an event."
+      },
+      "after": "1fb52e4cb9be1d52",
+      "id": "6fff045b90c3208a",
+      "date": 1520810207781
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "0a66e6e1b57746c9",
+        "text": "Say FOR 60 minutes to set the duration."
+      },
+      "after": "6fff045b90c3208a",
+      "id": "0a66e6e1b57746c9",
+      "date": 1520810216851
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "f9aa74d06a0b9f37",
+        "text": "Say IN America/Chicago to use that timezone."
+      },
+      "after": "0a66e6e1b57746c9",
+      "id": "f9aa74d06a0b9f37",
+      "date": 1520810221393
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "0eb81eba7d1e6100",
+        "text": "Say ALSO Europe/Berlin to show times there."
+      },
+      "after": "f9aa74d06a0b9f37",
+      "id": "0eb81eba7d1e6100",
+      "date": 1520810227025
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "88b517513cb41de9",
+        "text": "See [[More About Zones]] for time zone names."
+      },
+      "after": "0eb81eba7d1e6100",
+      "id": "88b517513cb41de9",
+      "date": 1520810231819
+    },
+    {
+      "type": "add",
+      "id": "b1805e1b3236a4e5",
+      "item": {
+        "type": "paragraph",
+        "id": "b1805e1b3236a4e5",
+        "text": "Say ZONES to show a list of all recognized time zones."
+      },
+      "after": "0eb81eba7d1e6100",
+      "date": 1520810559076
+    },
+    {
+      "type": "edit",
+      "id": "b1805e1b3236a4e5",
+      "item": {
+        "type": "paragraph",
+        "id": "b1805e1b3236a4e5",
+        "text": "Say ZONES to show a list of recognized time zones."
+      },
+      "date": 1520810567763
+    }
+  ]
+}

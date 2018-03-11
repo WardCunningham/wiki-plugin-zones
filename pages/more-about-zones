@@ -1,0 +1,74 @@
+{
+  "title": "More About Zones",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "7754a74adc203e2d",
+      "text": "Time zones are specified with one or more segments where the the first segment is a region and the last is typically a city within the region. Choose a city or similar geographical area that has the desired time all year. "
+    },
+    {
+      "type": "zones",
+      "id": "e77929011490ba6a",
+      "text": "ZONES"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "More About Zones",
+        "story": []
+      },
+      "date": 1520810282305
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7754a74adc203e2d"
+      },
+      "id": "7754a74adc203e2d",
+      "type": "add",
+      "date": 1520810291858
+    },
+    {
+      "type": "edit",
+      "id": "7754a74adc203e2d",
+      "item": {
+        "type": "paragraph",
+        "id": "7754a74adc203e2d",
+        "text": "Time zones are specified with one or more segments where the the first segment is a region and the last is typically a city within the region. Choose a city or similar geographical area that has the desired time throughout the year. "
+      },
+      "date": 1520810490127
+    },
+    {
+      "type": "edit",
+      "id": "7754a74adc203e2d",
+      "item": {
+        "type": "paragraph",
+        "id": "7754a74adc203e2d",
+        "text": "Time zones are specified with one or more segments where the the first segment is a region and the last is typically a city within the region. Choose a city or similar geographical area that has the desired time all year. "
+      },
+      "date": 1520810517229
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e77929011490ba6a"
+      },
+      "id": "e77929011490ba6a",
+      "type": "add",
+      "after": "7754a74adc203e2d",
+      "date": 1520810521741
+    },
+    {
+      "type": "edit",
+      "id": "e77929011490ba6a",
+      "item": {
+        "type": "zones",
+        "id": "e77929011490ba6a",
+        "text": "ZONES"
+      },
+      "date": 1520810531069
+    }
+  ]
+}

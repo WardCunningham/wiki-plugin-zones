@@ -1,10 +1,5 @@
 moment = require 'moment-timezone'
 
-zones =
-  Portland: 'America/Los_Angeles'
-  Denver: 'America/Denver'
-  London: 'Europe/London'
-
 expand = (text)->
   text
     .replace /&/g, '&amp;'
@@ -13,21 +8,49 @@ expand = (text)->
     .replace /\*(.+?)\*/g, '<i>$1</i>'
 
 parse = (text) ->
-  schedule = {zones:[]}
-  zones = ['America/Los_Angeles','America/Denver','Europe/London','Europe/Paris','Asia/Tokyo']
-  for zone in zones
-    city = zone.split('/').reverse()[0]
-    schedule.zones.push {city, zone}
-  schedule.anchor = zones[0]
+  schedule =
+    zones:[]
+    heads:[]
+    in:'US/Pacific'
+    date: '1/1/2018'
+    time: '12:00'
+    for: '60 minutes'
+
+  for line in text.split(/ *\r?\n/)
+    if line.match /ZONES/
+      return {allzones:true}
+    else if m = line.match(/IN +(.*)/)
+      schedule.in = m[1]
+      city = m[1].split('/').reverse()[0]
+      schedule.zones.push {city, zone:m[1]}
+    else if m = line.match(/ALSO +(.*)/)
+      city = m[1].split('/').reverse()[0]
+      schedule.zones.push {city, zone:m[1]}
+    else if m = line.match(/DATE +(.*)/)
+      schedule.date = m[1]
+    else if m = line.match(/TIME +(.*)/)
+      schedule.time = m[1]
+    else if m = line.match(/FOR +(.*)/)
+      schedule.for = m[1]
+    else if line.match(/\S/)
+      schedule.heads.push line.trim()
   schedule
 
+allzones = ->
+  zones = []
+  for zone in moment.tz.names()
+    zones.push "<tr><td>#{zone}"
+  """<table style="background:#eee; width:100%; padding:16px;">#{zones.join "\n"}</table>"""
+
 render = (schedule) ->
+  return allzones() if schedule.allzones?
   dx = 60
   dy = 45
   hy = 20
   width = 420
   height = hy + dy*(schedule.zones.length + 1)
-  event = moment.tz("3/14/2018 10:00 am", "MM-DD-YYYY h:mm A", schedule.anchor)
+  start = "#{schedule.date} #{schedule.time}"
+  event = moment.tz(start, "MM-DD-YYYY h:mm A", schedule.in)
 
   markup = []
 
@@ -77,13 +100,14 @@ render = (schedule) ->
       for h in [-3..5]
         x = (h+3)*dx
         rect {x,y,width:dx-5,height:20,fill:color(now)}, ->
-        text {x:x+20,y:y+10}, now.hours()+':00'
+          title now.format 'dddd, MMMM Do'
+        text {x:x+20,y:y+10}, now.format('hh:mm')
         now.add(1, 'hour')
       text {x:60,y:y-10}, city
 
   svg {'viewBox':"0 0 #{width}, #{height}"}, ->
     rect {x: 0, y:0, width, height, fill:'#eee'}, ->
-    marker "Wiki Hangout"
+    marker schedule.heads[0]||"Unspecified Event"
     scales schedule.zones
 
   markup.join "\n"
