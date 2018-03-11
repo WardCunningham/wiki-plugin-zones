@@ -1,0 +1,57 @@
+{
+  "title": "About Zones Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "3f5ca9eb8adf5f8e",
+      "text": "Zones is a slide rule useful for scheduling and awaiting events where offsets that change with seasons and prefered times of participants are taken into account."
+    },
+    {
+      "type": "zones",
+      "id": "1fb52e4cb9be1d52",
+      "text": "Wiki User/Developer Video Chat\n[[Google Hangout]]\nDATE Wednesdays\nTIME 10 am\nFOR 60 minutes\nIN Portland\nALSO Denver\nALSO London"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Zones Plugin",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "3f5ca9eb8adf5f8e",
+            "text": "Here we describe the purpose of the plugin and include a sample."
+          },
+          {
+            "type": "zones",
+            "id": "1fb52e4cb9be1d52",
+            "text": "This is text in the new plugin. You can *double-click* to edit it too."
+          }
+        ]
+      },
+      "date": 1520708103000,
+      "certificate": "from mkplugin.sh"
+    },
+    {
+      "type": "edit",
+      "id": "3f5ca9eb8adf5f8e",
+      "item": {
+        "type": "paragraph",
+        "id": "3f5ca9eb8adf5f8e",
+        "text": "Zones is a slide rule useful for scheduling and awaiting events where offsets that change with seasons and prefered times of participants are taken into account."
+      },
+      "date": 1520736503948
+    },
+    {
+      "type": "edit",
+      "id": "1fb52e4cb9be1d52",
+      "item": {
+        "type": "zones",
+        "id": "1fb52e4cb9be1d52",
+        "text": "Wiki User/Developer Video Chat\n[[Google Hangout]]\nDATE Wednesdays\nTIME 10 am\nFOR 60 minutes\nIN Portland\nALSO Denver\nALSO London"
+      },
+      "date": 1520736533395
+    }
+  ]
+}

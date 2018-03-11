@@ -7,12 +7,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-git-authors');
 
   grunt.initConfig({
-    clean: ['client/flash.js', 'client/flash.js.map', 'test/test.js', 'test/test.js.map'],
+    clean: ['client/zones.js', 'client/zones.js.map', 'test/test.js', 'test/test.js.map'],
 
     browserify: {
       plugin: {
-        src: ['client/flash.coffee'],
-        dest: 'client/flash.js',
+        src: ['client/zones.coffee'],
+        dest: 'client/zones.js',
         options: {
           transform: ['coffeeify'],
           browserifyOptions: {

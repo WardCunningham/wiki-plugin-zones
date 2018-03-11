@@ -77,6 +77,6 @@ emit = ($item, item) ->
 bind = ($item, item) ->
   $item.dblclick -> wiki.textEditor $item, item
 
-window.plugins.flash = {emit, bind} if window?
+window.plugins.zones = {emit, bind} if window?
 module.exports = {expand} if module?
 

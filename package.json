@@ -1,17 +1,17 @@
 {
-  "name": "wiki-plugin-flash",
+  "name": "wiki-plugin-zones",
   "version": "0.1.0",
-  "description": "Federated Wiki - Flash Plugin",
+  "description": "Federated Wiki - Zones Plugin",
   "keywords": [
-    "flash",
+    "zones",
     "wiki",
     "federated wiki",
     "plugin"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "you@example.com",
-    "url": "http://example.com"
+    "name": "Ward Cunningham",
+    "email": "ward@c2.com",
+    "url": "http://ward.asia.wiki.org"
   },
   "contributors": [],
   "scripts": {
@@ -29,10 +29,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fedwiki/wiki-plugin-flash.git"
+    "url": "https://github.com/wardcunningham/wiki-plugin-zones.git"
   },
   "bugs": {
-    "url": "https://github.com/fedwiki/wiki-plugin-flash/issues"
+    "url": "https://github.com/wardcunningham/wiki-plugin-zones/issues"
   },
   "engines": {
     "node": ">=0.10"
