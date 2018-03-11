@@ -101,7 +101,7 @@ render = (schedule) ->
         x = (h+3)*dx
         rect {x,y,width:dx-5,height:20,fill:color(now)}, ->
           title now.format 'dddd, MMMM Do'
-        text {x:x+20,y:y+10}, now.format('hh:mm')
+        text {x:x+20,y:y+10}, now.format('HH:mm')
         now.add(1, 'hour')
       text {x:60,y:y-10}, city
 

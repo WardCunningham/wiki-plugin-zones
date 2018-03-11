@@ -9,7 +9,17 @@
     {
       "type": "zones",
       "id": "1fb52e4cb9be1d52",
-      "text": "Wiki Weekly Hangout\nDATE 3/14/2018\nTIME 10:15 am\nFOR 60 minutes\nALSO Pacific/Honolulu\nIN US/Pacific\nALSO America/Denver\nALSO Europe/London\nALSO Europe/Paris\nALSO Asia/Tokyo"
+      "text": "Wiki Weekly Hangout\nDATE 3/14/2018\nTIME 10:00am\nFOR 60 minutes\nALSO Pacific/Honolulu\nIN US/Pacific\nALSO America/Denver\nALSO Europe/London\nALSO Europe/Paris\nALSO Asia/Tokyo"
+    },
+    {
+      "type": "paragraph",
+      "id": "df816cdf63a3935c",
+      "text": "Hover over times to see dates."
+    },
+    {
+      "type": "markdown",
+      "id": "3222b0629b2074e3",
+      "text": "# Markup"
     },
     {
       "type": "paragraph",
@@ -168,6 +178,64 @@
         "text": "Say ZONES to show a list of recognized time zones."
       },
       "date": 1520810567763
+    },
+    {
+      "type": "add",
+      "id": "df816cdf63a3935c",
+      "item": {
+        "type": "paragraph",
+        "id": "df816cdf63a3935c",
+        "text": "Hover over times to see dates."
+      },
+      "after": "88b517513cb41de9",
+      "date": 1520811691759
+    },
+    {
+      "type": "move",
+      "order": [
+        "3f5ca9eb8adf5f8e",
+        "1fb52e4cb9be1d52",
+        "df816cdf63a3935c",
+        "6fff045b90c3208a",
+        "0a66e6e1b57746c9",
+        "f9aa74d06a0b9f37",
+        "0eb81eba7d1e6100",
+        "b1805e1b3236a4e5",
+        "88b517513cb41de9"
+      ],
+      "id": "df816cdf63a3935c",
+      "date": 1520811695722
+    },
+    {
+      "type": "add",
+      "id": "3222b0629b2074e3",
+      "item": {
+        "type": "paragraph",
+        "id": "3222b0629b2074e3",
+        "text": "# Markup"
+      },
+      "after": "df816cdf63a3935c",
+      "date": 1520811705717
+    },
+    {
+      "type": "edit",
+      "id": "3222b0629b2074e3",
+      "item": {
+        "type": "markdown",
+        "id": "3222b0629b2074e3",
+        "text": "# Markup"
+      },
+      "date": 1520811712419
+    },
+    {
+      "type": "edit",
+      "id": "1fb52e4cb9be1d52",
+      "item": {
+        "type": "zones",
+        "id": "1fb52e4cb9be1d52",
+        "text": "Wiki Weekly Hangout\nDATE 3/14/2018\nTIME 10:00am\nFOR 60 minutes\nALSO Pacific/Honolulu\nIN US/Pacific\nALSO America/Denver\nALSO Europe/London\nALSO Europe/Paris\nALSO Asia/Tokyo"
+      },
+      "date": 1520811881709
     }
   ]
 }
