@@ -36,5 +36,11 @@
   },
   "engines": {
     "node": ">=0.10"
+  },
+  "dependencies": {
+    "coffeeify": "^3.0.1",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "moment-timezone": "^0.5.14"
   }
 }
