@@ -1,4 +1,5 @@
 moment = require 'moment-timezone'
+here = moment.tz.guess()
 
 expand = (text)->
   text
@@ -11,7 +12,7 @@ parse = (text) ->
   schedule =
     zones:[]
     heads:[]
-    in:'US/Pacific'
+    in: here
     date: '1/1/2018'
     time: '12:00'
     for: '60 minutes'
@@ -26,6 +27,9 @@ parse = (text) ->
     else if m = line.match(/ALSO +(.*)/)
       city = m[1].split('/').reverse()[0]
       schedule.zones.push {city, zone:m[1]}
+    else if m = line.match(/HERE/)
+      city = here.split('/').reverse()[0]
+      schedule.zones.push {city, zone:here}
     else if m = line.match(/DATE +(.*)/)
       schedule.date = m[1]
     else if m = line.match(/TIME +(.*)/)
@@ -38,8 +42,9 @@ parse = (text) ->
 
 allzones = ->
   zones = []
+  now = moment()
   for zone in moment.tz.names()
-    zones.push "<tr><td>#{zone}"
+    zones.push "<tr><td>#{now.tz(zone).format('ddd HH:mm')}<td>#{zone}"
   """<table style="background:#eee; width:100%; padding:16px;">#{zones.join "\n"}</table>"""
 
 render = (schedule) ->
