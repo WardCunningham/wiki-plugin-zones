@@ -39,7 +39,7 @@
     {
       "type": "paragraph",
       "id": "f9aa74d06a0b9f37",
-      "text": "Say IN America/Chicago to use that timezone."
+      "text": "Say IN America/Chicago to use that time zone."
     },
     {
       "type": "paragraph",
@@ -49,7 +49,7 @@
     {
       "type": "paragraph",
       "id": "ef9bb451f6f41976",
-      "text": "Say HERE to show local timezone if known"
+      "text": "Say HERE to show local time zone if known"
     },
     {
       "type": "paragraph",
@@ -269,6 +269,26 @@
       },
       "after": "0eb81eba7d1e6100",
       "date": 1520830474769
+    },
+    {
+      "type": "edit",
+      "id": "f9aa74d06a0b9f37",
+      "item": {
+        "type": "paragraph",
+        "id": "f9aa74d06a0b9f37",
+        "text": "Say IN America/Chicago to use that time zone."
+      },
+      "date": 1520831249442
+    },
+    {
+      "type": "edit",
+      "id": "ef9bb451f6f41976",
+      "item": {
+        "type": "paragraph",
+        "id": "ef9bb451f6f41976",
+        "text": "Say HERE to show local time zone if known"
+      },
+      "date": 1520831262225
     }
   ]
 }
