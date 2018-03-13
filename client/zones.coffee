@@ -47,6 +47,13 @@ allzones = ->
     zones.push "<tr><td>#{now.tz(zone).format('ddd HH:mm')}<td>#{zone}"
   """<table style="background:#eee; width:100%; padding:16px;">#{zones.join "\n"}</table>"""
 
+event = (schedule) ->
+  if schedule.date.match /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$/
+    moment.tz(schedule.time, 'HH:mm', schedule.in).day(schedule.date)
+  else
+    start = "#{schedule.date} #{schedule.time}"
+    moment.tz(start, "MM/DD/YYYY HH:mm", schedule.in)
+
 render = (schedule) ->
   return allzones() if schedule.allzones?
   dx = 60
@@ -54,8 +61,6 @@ render = (schedule) ->
   hy = 20
   width = 420
   height = hy + dy*(schedule.zones.length + 1)
-  start = "#{schedule.date} #{schedule.time}"
-  event = moment.tz(start, "MM-DD-YYYY h:mm A", schedule.in)
 
   markup = []
 
@@ -101,11 +106,11 @@ render = (schedule) ->
     y = hy
     for {city,zone} in zones
       y += dy
-      now = moment(event).add(-3, 'hours').tz(zone)
+      now = event(schedule).add(-3, 'hours').tz(zone)
       for h in [-3..5]
         x = (h+3)*dx
         rect {x,y,width:dx-5,height:20,fill:color(now)}, ->
-          title now.format 'dddd, MMMM Do'
+          title now.format('dddd_MMMM Do_YYYY').replace(/_/g,"\n")
         text {x:x+20,y:y+10}, now.format('HH:mm')
         now.add(1, 'hour')
       text {x:60,y:y-10}, city

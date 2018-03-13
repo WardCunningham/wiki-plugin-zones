@@ -29,7 +29,17 @@
     {
       "type": "paragraph",
       "id": "6fff045b90c3208a",
-      "text": "Say TIME and DATE to create an event."
+      "text": "Say TIME 14:30 for time of day."
+    },
+    {
+      "type": "paragraph",
+      "id": "055fd18b1d910874",
+      "text": "Say DATE 3/14/2018 for day of year."
+    },
+    {
+      "type": "paragraph",
+      "id": "d2cb21833bee4d64",
+      "text": "Say DATE Wednesday for day of week."
     },
     {
       "type": "paragraph",
@@ -49,12 +59,17 @@
     {
       "type": "paragraph",
       "id": "ef9bb451f6f41976",
-      "text": "Say HERE to show local time zone if known"
+      "text": "Say HERE to show local time zone if known."
     },
     {
       "type": "paragraph",
       "id": "b1805e1b3236a4e5",
       "text": "Say ZONES to show a list of recognized time zones."
+    },
+    {
+      "type": "paragraph",
+      "id": "4325875d2bef7062",
+      "text": "Say other words to describe this event."
     }
   ],
   "journal": [
@@ -289,6 +304,69 @@
         "text": "Say HERE to show local time zone if known"
       },
       "date": 1520831262225
+    },
+    {
+      "type": "edit",
+      "id": "6fff045b90c3208a",
+      "item": {
+        "type": "paragraph",
+        "id": "6fff045b90c3208a",
+        "text": "Say TIME 14:30 for time of day."
+      },
+      "date": 1520950377161
+    },
+    {
+      "type": "add",
+      "id": "055fd18b1d910874",
+      "item": {
+        "type": "paragraph",
+        "id": "055fd18b1d910874",
+        "text": "Say DATE 3/14/2018 for day of year."
+      },
+      "after": "6fff045b90c3208a",
+      "date": 1520950421124
+    },
+    {
+      "type": "add",
+      "id": "d2cb21833bee4d64",
+      "item": {
+        "type": "paragraph",
+        "id": "d2cb21833bee4d64",
+        "text": "Say DATE Wednesday for day of week."
+      },
+      "after": "055fd18b1d910874",
+      "date": 1520950435500
+    },
+    {
+      "type": "add",
+      "id": "4325875d2bef7062",
+      "item": {
+        "type": "paragraph",
+        "id": "4325875d2bef7062",
+        "text": "Say words to describe this event."
+      },
+      "after": "b1805e1b3236a4e5",
+      "date": 1520950537243
+    },
+    {
+      "type": "edit",
+      "id": "ef9bb451f6f41976",
+      "item": {
+        "type": "paragraph",
+        "id": "ef9bb451f6f41976",
+        "text": "Say HERE to show local time zone if known."
+      },
+      "date": 1520950542833
+    },
+    {
+      "type": "edit",
+      "id": "4325875d2bef7062",
+      "item": {
+        "type": "paragraph",
+        "id": "4325875d2bef7062",
+        "text": "Say other words to describe this event."
+      },
+      "date": 1520950551448
     }
   ]
 }
