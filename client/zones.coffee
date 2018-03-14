@@ -107,13 +107,15 @@ render = (schedule) ->
     for {city,zone} in zones
       y += dy
       now = event(schedule).add(-3, 'hours').tz(zone)
+      rect {x:0,y:y-5,width,height:30,fill:'white',opacity:0.6}, ->
       for h in [-3..5]
         x = (h+3)*dx
-        rect {x,y,width:dx-5,height:20,fill:color(now)}, ->
-          title now.format('dddd_MMMM Do_YYYY').replace(/_/g,"\n")
+        rect {x,y,width:dx-5,height:20,fill:color(now),opacity:0.6}, ->
         text {x:x+20,y:y+10}, now.format('HH:mm')
+        rect {x,y,width:dx-5,height:20,opacity:0.0}, ->
+          title now.format('dddd_MMMM Do_YYYY').replace(/_/g,"\n")
         now.add(1, 'hour')
-      text {x:60,y:y-10}, city
+      text {x:60,y:y-10}, city.replace('_',' ')
 
   svg {'viewBox':"0 0 #{width}, #{height}"}, ->
     rect {x: 0, y:0, width, height, fill:'#eee'}, ->
