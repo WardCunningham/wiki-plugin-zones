@@ -98,9 +98,9 @@ render = (schedule) ->
 
   color = (now) ->
     if now.hour() >= 6 and now.hour() < 18
-      '#ffd'
+      '#ffa'
     else
-      '#ddf'
+      '#aaf'
 
   scales = (zones) ->
     y = hy
