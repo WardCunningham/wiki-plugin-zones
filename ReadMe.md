@@ -1,6 +1,6 @@
-# Federated Wiki - Flash Plugin
+# Federated Wiki - Zones Plugin
 
-This plugin, type: flash, extends the markup of the federated wiki.
+This plugin, type: zones, extends the markup of the federated wiki.
 
 ## Build
 
