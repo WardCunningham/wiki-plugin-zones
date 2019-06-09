@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         src: ['client/zones.coffee'],
         dest: 'client/zones.js',
         options: {
-          transform: ['coffeeify'],
+          transform: [[ 'coffeeify', { transpile: { presets: ['@babel/preset-env'] } } ]],
           browserifyOptions: {
             extensions: ".coffee"
           }
