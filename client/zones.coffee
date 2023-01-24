@@ -128,7 +128,7 @@ emit = ($item, item) ->
   $item.append render parse item.text
 
 bind = ($item, item) ->
-  $item.dblclick -> wiki.textEditor $item, item
+  $item.on 'dblclick', () -> wiki.textEditor $item, item
 
 window.plugins.zones = {emit, bind} if window?
 module.exports = {expand} if module?
