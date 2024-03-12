@@ -18,20 +18,20 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
     "coffeeify": "^3.0.1",
-    "coffeescript": "^2.4.1",
+    "coffeescript": "^2.7.0",
     "expect.js": "^0.3.1",
     "grunt": "^1.6.1",
     "grunt-browserify": "^6.0.0",
-    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-coffee": "^2.1.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-git-authors": "^3.2.0",
-    "grunt-mocha-test": "^0.13.2",
-    "mocha": "^10.2.0",
-    "moment-timezone": "^0.5.43"
+    "grunt-mocha-test": "^0.13.3",
+    "mocha": "^10.3.0",
+    "moment-timezone": "^0.5.45"
   },
   "license": "MIT",
   "repository": {
