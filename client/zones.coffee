@@ -49,7 +49,10 @@ allzones = ->
 
 event = (schedule) ->
   if schedule.date.match /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$/
-    moment.tz(schedule.time, 'HH:mm', schedule.in).day(schedule.date)
+    days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    daynum = days.indexOf(schedule.date)
+    daynum += 7 if moment().day() > daynum
+    moment.tz(schedule.time, 'HH:mm', schedule.in).day(daynum)
   else
     start = "#{schedule.date} #{schedule.time}"
     moment.tz(start, "MM/DD/YYYY HH:mm", schedule.in)
@@ -131,5 +134,5 @@ bind = ($item, item) ->
   $item.on 'dblclick', () -> wiki.textEditor $item, item
 
 window.plugins.zones = {emit, bind} if window?
-module.exports = {expand} if module?
+module.exports = {expand,parse,event} if module?
 
