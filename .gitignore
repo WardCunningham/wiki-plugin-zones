@@ -1,6 +1,6 @@
 assets
 client/zones.js
-client/zones.map
+client/zones.js.map
 commons
 coverage
 node_modules
