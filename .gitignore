@@ -1,5 +1,10 @@
-/*/*.js
-/*/*.map
+assets
+client/zones.js
+client/zones.js.map
+commons
+coverage
 node_modules
 npm-debug.log
+meta-client.json
+recycle
 status
